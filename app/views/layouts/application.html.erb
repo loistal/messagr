@@ -10,8 +10,15 @@
   </head>
 
   <body>
+    
+    <div class="hero-section">
+      <%= render 'layouts/header' %>
 
-    <%= render 'layouts/header' %>
+      <div id="heroText" class="ui container">
+        <h1>Just chat.</h1>
+        <p> 💻 A messaging app that simply sends and receives messages</p>
+      </div>
+    </div>
 
     <div class="ui container">
      <%= yield %>
