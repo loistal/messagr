@@ -26,104 +26,24 @@
   <div class="twelve wide column">
     <div id="chatbox">
       <div class="ui feed">
-        <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
-              </div>
-            </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
-          </div>
-        </div>
+        
+        <% @messages.each do |message| %>
           <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
+            <p><%= message.user.icon %></p>
+            <div class="content">
+              <div class="summary">
+                <b><%= message.user.username %></b> says
+                <div class="date">
+                  <%= message.user.created_at.strftime("%F %I:%M %P") %>
+                </div>
+              </div>
+              <div class="extra text">
+                <%= message.body %>
               </div>
             </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
           </div>
-        </div>
-          <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
-              </div>
-            </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
-          </div>
-        </div>
-       <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
-              </div>
-            </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
-          </div>
-        </div>
-        <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
-              </div>
-            </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
-          </div>
-        </div>
-        <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
-              </div>
-            </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
-          </div>
-        </div>
-        <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> says
-              <div class="date">
-                3 days ago
-              </div>
-            </div>
-            <div class="extra text">
-              Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
-            </div>
-          </div>
-        </div>
+        <% end %>
+
       </div>
     </div>
 
