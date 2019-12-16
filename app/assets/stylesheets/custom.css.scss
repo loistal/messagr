@@ -1,12 +1,18 @@
 @import 'semantic-ui';
 
+
 body {
-	font-size: 25px;
+	font-size: 16px;
 	font-family: nunito, Arial, Helvetica, sans-serif;
 }
 
+footer {
+	margin-top: 80px;
+	margin-bottom: 20px;
+}
+
 h1 {
-	font-size: 2em;
+	font-size: 3em;
 	font-weight: 900;
 	font-family: nunito, Arial, Helvetica, sans-serif;
 }
@@ -104,4 +110,8 @@ h1 {
 
 #githubDiv {
 	margin-top: 20px;
+}
+
+#productDescription {
+	margin-top: 0;
 }
