@@ -1,8 +1,43 @@
-    <div class="hero-section">
-      <%= render 'layouts/header' %>
+<div class="hero-section">
+  <%= render 'layouts/header' %>
 
-      <div id="heroText" class="ui container">
-        <h1>Just chat.</h1>
-        <p> 💻 A messaging app that simply sends and receives messages</p>
-      </div>
-    </div>
+  <div id="heroText" class="ui container">
+    <h1>Just chat.</h1>
+    <p> 💻 A messaging app that simply sends and receives messages</p>
+  </div>
+</div>
+
+<div id="loginBox" class="ui container">
+	<div class="ui segment">
+	  <div class="ui two column very relaxed grid">
+	    <div class="column">
+	      
+	      <form id="loginFormRoot" class="ui form">
+			  <div class="field">
+			    <input type="email" name="email" placeholder="Email">
+			  </div>
+			  <div class="field">
+			    <input type="password" name="password" placeholder="Password">
+			  </div>
+			  <button class="ui button button-messagr" type="submit">Log in</button>
+			</form>
+
+	    </div>
+	    <div class="column">
+	    	<div id="signUpPitch">
+	    			<p>💸 We <b class="highlighted-text">don’t</b> sell your data. </br>
+		        🌎 <b class="highlighted-text">12,342 users</b> can’t be wrong. </br>
+		        🔐 End-to-end <b class="highlighted-text">data encryption</b></p>
+		        <form class="ui form">
+				  <button id="signUpRoot" class="ui button button-messagr" type="submit">Sign up</button>
+				</form>
+	    	</div>
+	    </div>
+	  </div>
+	  <div class="ui vertical divider">
+	    OR
+	  </div>
+	</div>
+</div>
+
+<div id="githubDiv" align="center"><a id="githubLink" href="#">See the code on Github 🏗</a></div>
