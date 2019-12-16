@@ -30,6 +30,11 @@ gem 'jquery-rails'
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
 gem 'bootstrap', '~> 4.4.1'
+
+gem 'bcrypt', '~> 3.1.7'
+
+gem 'hirb'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
