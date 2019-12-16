@@ -1,0 +1,14 @@
+<div class="event">
+  <p><%= message.user.icon %></p>
+  <div class="content">
+    <div class="summary">
+      <b><%= message.user.username %></b> says
+      <div class="date">
+        <%= message.user.created_at.strftime("%F %I:%M %P") %>
+      </div>
+    </div>
+    <div class="extra text">
+      <%= message.body %>
+    </div>
+  </div>
+</div>
