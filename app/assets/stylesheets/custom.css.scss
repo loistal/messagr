@@ -50,10 +50,20 @@ h1 {
 #headerChatroom {
 	background-image: asset-url('hero-chatroom.jpg');
 	background-size: cover;
-	height: 200px;
+	height: 100px;
 	margin-bottom: 50px;
 }
 
 .label {
 	margin-top: 10px;
+}
+
+#chatbox {
+	max-height: 400px;
+  	overflow-x: scroll;
+}
+
+#writeMessageBox {
+	margin-top: 20px;
+	height: 30px;
 }
