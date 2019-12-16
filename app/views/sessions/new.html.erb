@@ -11,16 +11,17 @@
 	<div class="ui segment">
 	  <div class="ui two column very relaxed grid">
 	    <div class="column">
-	      
-	      <form id="loginFormRoot" class="ui form">
-			  <div class="field">
-			    <input type="email" name="email" placeholder="Email">
-			  </div>
-			  <div class="field">
-			    <input type="password" name="password" placeholder="Password">
-			  </div>
-			  <button class="ui button button-messagr" type="submit">Log in</button>
-			</form>
+
+			<%= form_for(:session, html: {class: "ui form", role: "form", id: "loginFormRoot"}, url: login_path) do |f| %>
+				  <div class="field">
+				    <%= f.text_field :username, placeholder: "Username" %>
+				  </div>
+				  <div class="field">
+				    <%= f.password_field :password, placeholder: "Password" %>
+				  </div>
+				  <%= f.button "Login", class: "ui button button-messagr" %>
+			<% end %>
+	    
 
 	    </div>
 	    <div class="column">
