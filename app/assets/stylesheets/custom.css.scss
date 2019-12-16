@@ -43,3 +43,17 @@ h1 {
 	color: white;
 }
 
+.ui.vertical.menu {
+	padding: 30px;
+}
+
+#headerChatroom {
+	background-image: asset-url('hero-chatroom.jpg');
+	background-size: cover;
+	height: 200px;
+	margin-bottom: 50px;
+}
+
+.label {
+	margin-top: 10px;
+}
