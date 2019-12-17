@@ -21,10 +21,19 @@
 scroll_bottom = function() {
 
 	if ($("#chatbox").length > 0) {
-		console.log($("chatbox"));
 		$("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
 	}
 	
+}
+
+submit_message = function() {
+	$("#message_body").on("keydown", function(e){
+		if (e.keyCode == 13) {
+			alert("13");
+			$("#writeMessageBox > button").click();
+			e.target.value = "";
+		};
+	});
 }
 
 $(document).on('turbolinks:load', function(){
@@ -40,4 +49,5 @@ $(document).on('turbolinks:load', function(){
 	;
 
 	scroll_bottom();
+	submit_message();
 })
