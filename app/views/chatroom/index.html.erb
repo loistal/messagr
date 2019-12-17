@@ -5,16 +5,16 @@
 
 <div class="ui container">
   <div class="ui grid">
-    <div class="four wide column">
-      <div class="ui vertical menu">
-        <h4>Participants</h4>
+    <div id="participants-column" class="four wide column">
+      <div id="all-participants" class="ui vertical menu">
+        <h3>Participants</h3>
           <div class="ui feed">
             <%= render @users %>
           </div>  
       </div>
     </div>
 
-    <div class="twelve wide column">
+    <div id="chatbox-column" class="twelve wide column">
       <div id="chatbox">
         <div id="messageContainer" class="ui feed">
           <%= render @messages %>

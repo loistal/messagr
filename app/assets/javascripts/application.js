@@ -41,17 +41,43 @@ signup_modal = function() {
 	});
 }
 
+hide_participants = function () {
+	const lessThan1000 = window.matchMedia( "(max-width: 1000px)" );
+	lessThan1000.addListener(adaptSmallWindow);
+
+	const moreThan1000 = window.matchMedia( "(min-width: 1000px)" );
+	moreThan1000.addListener(adaptBiggerWindow);
+
+}
+
+function adaptSmallWindow(mq) {
+	if (mq.matches) {
+		$("#chatbox-column").removeClass("twelve wide column");
+		$("#chatbox-column").addClass("sixteen wide column");
+	} 
+}
+
+// media query change
+function adaptBiggerWindow(mq) {
+	if (mq.matches) {
+		$("#chatbox-column").removeClass("sixteen wide column");
+		$("#chatbox-column").addClass("twelve wide column");
+	} 
+}
+
 $(document).on('turbolinks:load', function(){
 	$('.ui.dropdown').dropdown();
 
 	$('.message .close')
-	  .on('click', function() {
-	    $(this)
-	      .closest('.message')
-	      .transition('fade')
-	    ;
-	  })
+	.on('click', function() {
+		$(this)
+		.closest('.message')
+		.transition('fade')
+		;
+	})
 	;
+
+	hide_participants();
 	signup_modal();
 	scroll_bottom();
 	submit_message();
