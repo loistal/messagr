@@ -32,9 +32,11 @@
       </div>
     </div>
 
-    <div id="writeMessageBox" class="ui fluid input">
-      <input type="text" placeholder="Write your message">
-    </div>
+    <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path) do |f| %> 
+      <div id="writeMessageBox">
+        <%= f.text_field :body %>
+      </div>
+    <% end %>
   </div>
 
 
