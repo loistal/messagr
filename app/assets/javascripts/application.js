@@ -17,6 +17,16 @@
 //= require semantic-ui
 //= require_tree .
 
+// scroll at the bottom of the chatroom to see the latest messages
+scroll_bottom = function() {
+
+	if ($("#chatbox").length > 0) {
+		console.log($("chatbox"));
+		$("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
+	}
+	
+}
+
 $(document).on('turbolinks:load', function(){
 	$('.ui.dropdown').dropdown();
 
@@ -28,4 +38,6 @@ $(document).on('turbolinks:load', function(){
 	    ;
 	  })
 	;
+
+	scroll_bottom();
 })

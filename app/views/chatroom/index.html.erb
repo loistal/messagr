@@ -1,46 +1,46 @@
 
-  <div id="headerChatroom">
-    <%= render 'layouts/header' %>
-  </div>
+<div id="headerChatroom">
+  <%= render 'layouts/header' %>
+</div>
 
 <div class="ui container">
-<div class="ui grid">
-  <div class="four wide column">
+  <div class="ui grid">
+    <div class="four wide column">
       <div class="ui vertical menu">
         <h4>Online users</h4>
-        <div class="ui feed">
-        <div class="event">
-          <p>🏄‍♀️</p>
-          <div class="content">
-            <div class="summary">
-              <b>Joe Henderson</b> 
-            </div>
-            
-          </div>
-        </div>
 
-      </div>
-      </div>
-  </div>
-
-  <div class="twelve wide column">
-    <div id="chatbox">
-      <div id="messageContainer" class="ui feed">
         
-        <%= render @messages %>
+          <div class="ui feed">
+            <div class="event">
+              <p>🏄‍♀️</p>
+              <div class="content">
+                <div class="summary">
+                  <b>Joe Henderson</b> 
+                </div>
+              </div>
+            </div>
+          </div>  
+        
 
       </div>
     </div>
 
-    <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f| %> 
+    <div class="twelve wide column">
+      <div id="chatbox">
+        <div id="messageContainer" class="ui feed">
+          <%= render @messages %>
+        </div>
+      </div>
+
+      <%= form_for(@message, html: {class: "ui reply form", role: "form"}, url: message_path, remote: true) do |f| %> 
       <div id="writeMessageBox">
         <%= f.text_field :body %>
       </div>
-    <% end %>
+      <% end %>
+    </div>
+
+
   </div>
-
-
-</div>
 
 </div>
 

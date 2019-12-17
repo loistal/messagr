@@ -66,8 +66,7 @@ h1 {
 
 #chatbox {
 	max-height: 400px;
-  	overflow-x: hidden;
-  	overflow-y: scroll;
+  	overflow: auto;
 }
 
 #writeMessageBox {
