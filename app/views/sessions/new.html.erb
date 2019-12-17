@@ -1,45 +1,66 @@
 <div class="hero-section">
-  <%= render 'layouts/header' %>
+	<%= render 'layouts/header' %>
 
-  <div id="heroText" class="ui container">
-    <h1>Just chat.</h1>
-    <h2 id="productDescription"> 💻 A messaging app that simply sends and receives messages</h2>
-  </div>
-</div>
-
-<div id="loginBox" class="ui container">
-	<div class="ui segment">
-	  <div class="ui two column very relaxed grid">
-	    <div class="column">
-
-			<%= form_for(:session, html: {class: "ui form", role: "form", id: "loginFormRoot"}, url: login_path) do |f| %>
-				  <div class="field">
-				    <%= f.text_field :username, placeholder: "Username" %>
-				  </div>
-				  <div class="field">
-				    <%= f.password_field :password, placeholder: "Password" %>
-				  </div>
-				  <%= f.button "Login", class: "ui button button-messagr" %>
-
-			<% end %>
-	    
-
-	    </div>
-	    <div class="column">
-	    	<div id="signUpPitch">
-	    			<p>💸 We <b class="highlighted-text">don’t</b> sell your data. </br>
-		        🌎 <b class="highlighted-text">12,342 users</b> can’t be wrong. </br>
-		        🔐 End-to-end <b class="highlighted-text">data encryption</b></p>
-		        <form class="ui form">
-				  <button id="signUpRoot" class="ui button button-messagr" type="submit">Sign up</button>
-				</form>
-	    	</div>
-	    </div>
-	  </div>
-	  <div class="ui vertical divider">
-	    OR
-	  </div>
+	<div id="heroText" class="ui container">
+		<h1>Just chat.</h1>
+		<h2 id="productDescription"> 💻 A messaging app that simply sends and receives messages</h2>
 	</div>
 </div>
 
-<div id="githubDiv" align="center"><a id="githubLink" href="#">See the code on Github 🏗</a></div>
+<!-- Sign up modal -->
+<div class="ui modal">
+	<i class="close icon"></i>
+	<div align="center" class="header">
+		Create your account
+	</div>
+	
+	<div class="modal-content">
+		<%= form_for(:user, html: {class: "ui form", role: "form", id: "signupFormModal"}, url: signup_path) do |f| %>
+		<div class="field">
+			<%= f.text_field :username, placeholder: "Choose a username" %>
+		</div>
+		<div class="field">
+			<%= f.password_field :password, placeholder: "Choose a password" %>
+		</div>
+		<%= f.button "Sign up", class: "ui button button-messagr" %>
+
+		<% end %>
+	</div>
+</div>
+<!-- / Sign up modal -->
+
+
+<div id="loginBox" class="ui container">
+	<div class="ui segment">
+		<div class="ui two column very relaxed grid">
+			<div class="column">
+
+				<%= form_for(:session, html: {class: "ui form", role: "form", id: "loginFormRoot"}, url: login_path) do |f| %>
+				<div class="field">
+					<%= f.text_field :username, placeholder: "Username" %>
+				</div>
+				<div class="field">
+					<%= f.password_field :password, placeholder: "Password" %>
+				</div>
+				<%= f.button "Login", class: "ui button button-messagr" %>
+
+				<% end %>
+
+
+			</div>
+			<div class="column">
+				<div id="signUpPitch">
+					<p>💸 We <b class="highlighted-text">don’t</b> sell your data. </br>
+						🌎 <b class="highlighted-text">12,342 users</b> can’t be wrong. </br>
+						🔐 End-to-end <b class="highlighted-text">data encryption</b></p>
+						<button id="signUpRoot" class="ui button button-messagr" type="submit">Sign up</button>
+					</div>
+				</div>
+			</div>
+			<div class="ui vertical divider">
+				OR
+			</div>
+		</div>
+	</div>
+
+	<div id="githubDiv" align="center"><a id="githubLink" href="#">See the code on Github 🏗</a></div>

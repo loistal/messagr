@@ -36,6 +36,12 @@ submit_message = function() {
 	});
 }
 
+signup_modal = function() {
+	$("#signUpRoot").click( function() {
+		$('.ui.modal').modal('show');
+	});
+}
+
 $(document).on('turbolinks:load', function(){
 	$('.ui.dropdown').dropdown();
 
@@ -47,7 +53,8 @@ $(document).on('turbolinks:load', function(){
 	    ;
 	  })
 	;
-
+	signup_modal();
 	scroll_bottom();
 	submit_message();
+
 })
