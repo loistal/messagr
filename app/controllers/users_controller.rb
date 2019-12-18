@@ -18,8 +18,11 @@ class UsersController < ApplicationController
 
 		if @user.save 
 			flash[:now] = "Thanks for signing up #{@user.username}"
-			redirect_to login_path
+		else
+			flash[:now] = "We couldn't create your account" 
 		end
+
+		redirect_to login_path
 	end
 
 	private 
