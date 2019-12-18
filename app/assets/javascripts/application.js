@@ -42,10 +42,10 @@ signup_modal = function() {
 }
 
 hide_participants = function () {
-	const lessThan1000 = window.matchMedia( "(max-width: 1000px)" );
+	var lessThan1000 = window.matchMedia( "(max-width: 1000px)" );
 	lessThan1000.addListener(adaptSmallWindow);
 
-	const moreThan1000 = window.matchMedia( "(min-width: 1000px)" );
+	var moreThan1000 = window.matchMedia( "(min-width: 1000px)" );
 	moreThan1000.addListener(adaptBiggerWindow);
 
 }
